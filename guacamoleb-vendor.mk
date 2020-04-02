@@ -18,6 +18,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/guacamoleb
 
 PRODUCT_COPY_FILES += \
+    vendor/oneplus/guacamoleb/proprietary/bin/dashd:$(TARGET_COPY_OUT_SYSTEM)/bin/dashd \
     vendor/oneplus/guacamoleb/proprietary/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
     vendor/oneplus/guacamoleb/proprietary/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wfdservice.rc \
     vendor/oneplus/guacamoleb/proprietary/etc/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml \
@@ -1645,5 +1646,4 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
-    vendor.qti.hardware.capabilityconfigstore-V1.0-java \
-    dashd
+    vendor.qti.hardware.capabilityconfigstore-V1.0-java
