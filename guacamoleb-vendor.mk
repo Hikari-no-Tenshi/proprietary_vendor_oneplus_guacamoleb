@@ -198,6 +198,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/diag_mdlog:$(TARGET_COPY_OUT_VENDOR)/bin/diag_mdlog \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
+    vendor/oneplus/guacamoleb/proprietary/vendor/bin/hostapd_cli:$(TARGET_COPY_OUT_VENDOR)/bin/hostapd_cli \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.drm@1.2-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.2-service.widevine \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
@@ -208,6 +209,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.2-service-qti \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.nfc@1.2-service \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.secure_element@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.secure_element@1.1-service \
+    vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service \
+    vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/hostapd \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/qcrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrild \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.dolby.hardware.dms@1.0-service \
@@ -238,6 +241,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/vendor.qti.hardware.vibrator@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.vibrator@1.2-service \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.power.pasrmanager@1.0-service \
+    vendor/oneplus/guacamoleb/proprietary/vendor/bin/hw/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
     vendor/oneplus/guacamoleb/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
@@ -340,6 +344,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/hbtp/loader.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/loader.cfg \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/hbtp/qtc801s.bin:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/qtc801s.bin \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/hdr_config.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_config.cfg \
+    vendor/oneplus/guacamoleb/proprietary/vendor/etc/hostapd/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
+    vendor/oneplus/guacamoleb/proprietary/vendor/etc/hostapd/hostapd.deny:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.deny \
+    vendor/oneplus/guacamoleb/proprietary/vendor/etc/hostapd/hostapd_default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd_default.conf \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
@@ -349,11 +356,13 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.secure_element@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.1-service.rc \
+    vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
+    vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/imsdatadaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdatadaemon.rc \
     vendor/oneplus/guacamoleb/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
@@ -818,6 +827,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcdsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsp_default_listener.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcert_parse.wpa_s.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcert_parse.wpa_s.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcld80211.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcld80211.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcne.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneapiclient.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneoplookup.so \
@@ -978,6 +989,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpphvx.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpplibrary.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpptestutils.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwapi_cert.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwapi_cert.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfdaac_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdaac_vendor.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfdcodecv4l2_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcodecv4l2_proprietary.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
@@ -998,11 +1010,14 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfduibcsinkinterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsinkinterface_proprietary.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfduibcsrc_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrc_proprietary.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwfduibcsrcinterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrcinterface_proprietary.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-ctrl.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwifi-hal-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-qcom.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwigig_flashaccess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwigig_flashaccess.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwigig_pciaccess.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwigig_pciaccess.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwigig_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwigig_utils.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwigigsensing.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwigigsensing.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwms.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwpa_client.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwqe.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxml.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
@@ -1297,6 +1312,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2vop.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcdsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsp_default_listener.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcert_parse.wpa_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcert_parse.wpa_s.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcld80211.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcld80211.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
@@ -1356,6 +1373,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libkeystore-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-wifi-hidl.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/liblearningmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblearningmodule.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/liblistenjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblistenjni.so \
@@ -1494,12 +1512,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphvx.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpplibrary.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpptestutils.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwapi_cert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwapi_cert.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdhdcpcp.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-ctrl.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwigig_flashaccess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwigig_flashaccess.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwigig_pciaccess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwigig_pciaccess.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwigig_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwigig_utils.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwigigsensing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwigigsensing.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
@@ -1607,7 +1629,11 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.1.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.2.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.3.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.hostapd@1.0.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.hostapd@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.hostapd@1.1.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.keystore@1.0.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.supplicant@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.supplicant@2.0.so \
+    vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.supplicant@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.supplicant@2.1.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so \
