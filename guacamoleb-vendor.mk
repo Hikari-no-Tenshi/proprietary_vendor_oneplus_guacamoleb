@@ -470,6 +470,22 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/guacamoleb/proprietary/vendor/firmware/ipa_uc.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_uc.elf \
     vendor/oneplus/guacamoleb/proprietary/vendor/firmware/ipa_uc.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_uc.mdt \
     vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_18821_SY761.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_18821_SY761.bin \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_18857_S3706.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_18857_S3706.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_18865_S3706.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_18865_S3706.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_18865_S3706_NEW.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_18865_S3706_NEW.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_19801_SY761.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_19801_SY761.bin \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_19801_SY761_NEW.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_19801_SY761_NEW.bin \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_19861_SY761.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_19861_SY761.bin \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/FW_19861_SY761_NEW.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/FW_19861_SY761_NEW.bin \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_18821_SY761.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_18821_SY761.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_18857_S3706.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_18857_S3706.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_18865_S3706.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_18865_S3706.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_18865_S3706_NEW.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_18865_S3706_NEW.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_19801_SY761.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_19801_SY761.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_19801_SY761_NEW.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_19801_SY761_NEW.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_19861_SY761.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_19861_SY761.img \
+    vendor/oneplus/guacamoleb/proprietary/vendor/firmware/tp/LIMIT_19861_SY761_NEW.img:$(TARGET_COPY_OUT_VENDOR)/firmware/tp/LIMIT_19861_SY761_NEW.img \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/oneplus/guacamoleb/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
